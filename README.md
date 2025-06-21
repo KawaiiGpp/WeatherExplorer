@@ -16,3 +16,14 @@ information for **provinces, cities and districts across China**.
 
 > 请注意：当前**仅支持查询国内**的天气信息。  
 > Please note: Weather data is currently **available only for locations in China**.
+<br>
+
+## 如何使用 - Usage
+本程序使用来自**APISpace**的**天气预报查询**功能，[也就是这里](https://www.apispace.com/eolink/api/456456/introduction)。  
+The program uses the API from **APISpace**, [find out more there](https://www.apispace.com/eolink/api/456456/introduction).  
+想要正常使用，你需要先配置**两个环境变量**。  
+To run the program, make sure to set up **2 environment variables** first.  
+- `WEATHER_API=[来自APISpace的URL，结尾保留now?areacode=即可]`  
+  `WEATHER_API=[URL from APISpace ending with 'now?areacode=']`
+- `WEATHER_TOKEN=[来自APISpace的你的Token]`  
+  `WEATHER_TOKEN=[Your token from APISpace]`
