@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WeatherExplorer.Core;
+using WeatherExplorer.Forms.Alarm;
 using WeatherExplorer.Forms.CityPicker;
 using WeatherExplorer.Forms.Detail;
 using WeatherExplorer.Resource.Managers;
@@ -89,6 +90,16 @@ namespace WeatherExplorer.Forms.Main
             {
                 MessageBox.Show($"刷新按钮事件处理异常\n请联系开发者\n{ex.Message}", "错误");
             }
+        }
+
+        private void btnDetails_Click(object sender, EventArgs e)
+        {
+            OpenIfCacheLoaded(() => new DetailForm(Cache));
+        }
+
+        private void btnAlarm_Click(object sender, EventArgs e)
+        {
+            OpenIfCacheLoaded(() => new AlarmForm(Cache));
         }
 
         private void LoadWeatherSnapshot(string raw)
@@ -186,9 +197,9 @@ namespace WeatherExplorer.Forms.Main
             lblRhDesc.Text = $"体感{WeatherUtils.GetHumidityDesc(value)}";
         }
 
-        private void btnDetails_Click(object sender, EventArgs e)
+        private void OpenIfCacheLoaded(Func<Form> func)
         {
-            if (Cache != null) new DetailForm(Cache).ShowDialog();
+            if (Cache != null) func.Invoke().ShowDialog();
             else MessageBox.Show("请先选择城市，获取对应天气信息再试。", "错误");
         }
     }

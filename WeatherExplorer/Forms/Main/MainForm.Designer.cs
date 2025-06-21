@@ -160,6 +160,7 @@
             this.btnAlarm.TabIndex = 10;
             this.btnAlarm.Text = "评价参考";
             this.btnAlarm.UseVisualStyleBackColor = true;
+            this.btnAlarm.Click += new System.EventHandler(this.btnAlarm_Click);
             // 
             // MainForm
             // 
