@@ -194,7 +194,7 @@ namespace WeatherExplorer.Forms.Main
 
         private void LoadHumidityDesc(int value)
         {
-            lblRhDesc.Text = $"体感{WeatherUtils.GetHumidityDesc(value)}";
+            lblRhDesc.Text = $"目前{WeatherUtils.GetHumidityDesc(value)}";
         }
 
         private void OpenIfCacheLoaded(Func<Form> func)

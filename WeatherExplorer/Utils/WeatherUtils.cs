@@ -11,11 +11,11 @@ namespace WeatherExplorer.Utils
         public static string GetHumidityDesc(int rh)
         {
             if (rh >= 90) return "非常潮湿";
-            else if (rh >= 80) return "潮湿";
-            else if (rh >= 60) return "较潮湿";
-            else if (rh >= 50) return "舒适";
-            else if (rh >= 40) return "较干燥";
-            else if (rh >= 30) return "干燥";
+            else if (rh >= 80) return "天气潮湿";
+            else if (rh >= 60) return "天气湿润";
+            else if (rh >= 50) return "湿度适中";
+            else if (rh >= 40) return "天气干爽";
+            else if (rh >= 30) return "天气干燥";
             else return "非常干燥";
         }
 
