@@ -39,11 +39,11 @@ namespace WeatherExplorer.Resource.Managers.Alarms
         public static readonly AlarmItem HeatIV = new AlarmItem("heat_iv.png", "高温IV级",
             "体感温度达32℃以上，天气炎热，请注意防晒补水。");
         public static readonly AlarmItem HeatIII = new AlarmItem("heat_iii.png", "高温III级",
-            "体感温度达37℃以上，天气炎热，请注意防暑降温。");
+            "体感温度达36℃以上，天气炎热，请注意防暑降温。");
         public static readonly AlarmItem HeatII = new AlarmItem("heat_ii.png", "高温II级",
-            "体感温度达42℃以上，天气酷热，高温时段请减少户外活动。"); 
+            "体感温度达40℃以上，天气酷热，高温时段请减少户外活动。"); 
         public static readonly AlarmItem HeatI = new AlarmItem("heat_i.png", "高温I级",
-            "体感温度达46℃以上，天气酷热，请尽量避免户外活动。");
+            "体感温度达45℃以上，天气酷热，请尽量避免户外活动。");
 
         public static readonly AlarmItem ColdIV = new AlarmItem("cold_iv.png", "寒冷IV级",
             "体感温度降至10℃以下，天气寒凉，请注意适当添衣。");
@@ -72,9 +72,9 @@ namespace WeatherExplorer.Resource.Managers.Alarms
             else if (feelTemperature <= 5) result.Add(ColdIII);
             else if (feelTemperature <= 10) result.Add(ColdIV);
 
-            if (feelTemperature >= 46) result.Add(HeatI);
-            else if (feelTemperature >= 42) result.Add(HeatII);
-            else if (feelTemperature >= 37) result.Add(HeatIII);
+            if (feelTemperature >= 45) result.Add(HeatI);
+            else if (feelTemperature >= 40) result.Add(HeatII);
+            else if (feelTemperature >= 36) result.Add(HeatIII);
             else if (feelTemperature >= 32) result.Add(HeatIV);
 
             if (windSpeed >= 24.5) result.Add(GaleI);
