@@ -189,7 +189,7 @@ namespace WeatherExplorer.Forms.Main
 
         private void LoadWindSpeedDesc(string level, int angle)
         {
-            lblWindDesc.Text = $"{WeatherUtils.GetWindDirection(angle)} 约{level}";
+            lblWindDesc.Text = $"{WeatherUtils.GetWindDirection(angle)} {level}";
         }
 
         private void LoadHumidityDesc(int value)
